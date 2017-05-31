@@ -11,6 +11,8 @@ fun main(args: Array<String>) {
     val v = 1
     var z: Int = 1
     val w: Int = 1
+
+ //   w = null //编译报错，不能为null
 //    val a // 编译报错 ， 必须要有初始类型
 
 

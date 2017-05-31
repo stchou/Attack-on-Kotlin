@@ -5,10 +5,11 @@ package ch02.`2_1`
  */
 
 fun main(args: Array<String>) {
-    var a: Float
-    val b: Double
-    var c = 12.34 // 直接赋值，默认推断为Double
-    var d = 56.78F // 指定类型为Float
+    var floatA: Float
+    val floatB: Double
+    var floatC = 12.34 // 直接赋值，默认推断为Double
+    var floatD = 56.78F // 指定类型为Float
+    val floatE : Float = 90.12F // 指定类型为Float，并赋值为90.12
 
     println("Float max value = " + Float.MAX_VALUE)
     println("Float min value = " + Float.MIN_VALUE)
