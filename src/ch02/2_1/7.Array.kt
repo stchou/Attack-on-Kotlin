@@ -1,5 +1,7 @@
 package ch02.`2_1`
 
+import com.sun.xml.internal.fastinfoset.util.StringArray
+
 /**
  * Created by zhoushengtao on 2017/5/28.
  */
@@ -22,4 +24,7 @@ fun main(args: Array<String>) {
     val arrayBoolean : BooleanArray // Boolean数组，同Array<Boolean>
     //....
 
+    val shortArray : ShortArray
+    val byteArray : ByteArray
+    val stringArray : StringArray
 }
