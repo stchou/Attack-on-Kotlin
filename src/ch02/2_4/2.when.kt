@@ -52,4 +52,16 @@ fun main(args: Array<String>) {
             print("obj is not a number")
         }
     }
+
+//    when {
+//        x.isOdd() -> print("x is odd")
+//        x.isEven() -> print("x is even")
+//        else -> print("x is funny")
+//    }
+}
+
+
+fun hasPrefix(x: Any) = when(x) {
+    is String -> x.startsWith("prefix")
+    else -> false
 }
