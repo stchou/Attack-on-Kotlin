@@ -80,14 +80,71 @@ fun main(args: Array<String>) {
 
     println()
 
-    val students = arrayOf("mike", "david", "jason", "green", "eva")
 
+
+    val students = arrayOf("mike", "david", "jason", "green", "eva")
     for ((index, stu) in students.withIndex()) {
         // 寻找jason的下标
         if (stu == "jason") {
             println("find jason，his index is $index")
-            break
+            break // 跳出for
         }
     }
 
+
+    var countDownD = 10
+    while (countDownD > 0) {
+        countDownD--
+        println("countDownD is $countDownD")
+        if (countDownD == 5) {
+            break // countDownD为5时，跳出while
+        }
+    }
+
+
+    // 判断是否存在同名的男女学生
+
+    // 男学生
+    val maleStudent = arrayOf("david","jason","mike")
+    // 女学生
+    val femaleStudent = arrayOf("marry","mike","eva")
+
+    // 标记是否找到
+    var hasFind = false
+
+    for (male in maleStudent) {
+        for (female in femaleStudent) {
+            if(male == female) {
+                hasFind = true // 做个标记符，不然外层循环不知道内层循环是否找到，无法判断是否需要break
+                println("find the same name student!")
+                break // 跳出女学生for循环
+            }
+        }
+        if (hasFind) {
+            break // 跳出男学生for循环
+        }
+    }
+
+
+    // 标签配合break使用
+    formale@ for (male in maleStudent) {
+        for (female in femaleStudent) {
+            if(male == female) {
+                println("find the same name student!")
+                break@formale // 从标签@formale处跳出
+            }
+        }
+    }
+
+
+
+    // 标签配合continue使用
+    formale@ for (male in maleStudent) {
+        for (female in femaleStudent) {
+            if(male == female) {
+                println("find the same name student!")
+                continue@formale // 继续查找下一个
+            }
+        }
+    }
 }
