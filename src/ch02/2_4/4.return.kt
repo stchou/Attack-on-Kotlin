@@ -25,6 +25,13 @@ fun findX(xArray : Array<String>) {
 }
 
 
+/**
+ * 获取百分比显示的数字
+ */
+fun getPercent(number: Double): String {
+    val percentNumber = number * 100
+    return "$percentNumber %"
+}
 
 fun main(args: Array<String>) {
 
@@ -34,5 +41,8 @@ fun main(args: Array<String>) {
 
     val xArray = arrayOf("a","b","x","c","d")
     findX(xArray)
+
+
+    println(getPercent(0.98))
 
 }
