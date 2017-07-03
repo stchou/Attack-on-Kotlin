@@ -33,6 +33,42 @@ fun getPercent(number: Double): String {
     return "$percentNumber %"
 }
 
+/**
+ * 给一个字符串拼接前缀和后缀
+ * 前缀默认值：***
+ * 后缀默认值：###
+ */
+fun catString(myString: String, prefix: String = "***", suffix: String = "###"): String{
+    return prefix + myString + suffix
+}
+
+
+/**
+ * 求多个数字的和
+ */
+fun sumNumbers(vararg numbers : Double) : Double{
+    var result : Double = 0.0
+    for (number in numbers) {
+        result += number
+    }
+    return result
+}
+
+fun compare(numberA: Int, numberB: Int) : Int{
+    var powerB = 0
+    fun power(num : Int) : Int{
+        return num * num
+    }
+    powerB = power(numberB)
+
+    if (numberA > powerB) {
+        return numberA
+    } else {
+        return powerB
+    }
+}
+
+
 fun main(args: Array<String>) {
 
     val result = add(1,2)
@@ -45,4 +81,7 @@ fun main(args: Array<String>) {
 
     println(getPercent(0.98))
 
+    println(catString("hello"))
+
+    println(sumNumbers(1.2,2.56,3.14))
 }
