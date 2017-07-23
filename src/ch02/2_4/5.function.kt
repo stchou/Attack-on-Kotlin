@@ -55,7 +55,19 @@ fun compare(numberA: Int, numberB: Int) : Int{
 }
 
 
+fun reformat(str: String,
+             normalizeCase: Boolean = true,
+             upperCaseFirstLetter: Boolean = true,
+             divideByCamelHumps: Boolean = false,
+             wordSeparator: Char = ' ') {
+    //...
+}
 
+fun printHello(name: String): Unit {
+    return Unit// 和不写return
+            // 和return Unit作用一样
+
+}
 
 fun main(args: Array<String>) {
 
@@ -69,5 +81,10 @@ fun main(args: Array<String>) {
     // 报错，无法直接调用内部嵌套的函数
     //power()
 
+    var n = 999;
+    fun f1() {
+        println(n) // 打印999
+    }
+    f1()
 
 }

@@ -24,6 +24,28 @@ fun findX(xArray : Array<String>) {
     println("Can not find 'x' !")
 }
 
+/**
+ * return 标签测试
+ */
+fun foo() {
+    val ints = arrayOf(1,2,0,3,5)
+
+    ints.forEach lit@ {
+        if (it == 0) return@lit
+        print(it)
+    }
+}
+
+/**
+ * 匿名内部类 return 标签配合测试
+ */
+fun foo2() {
+    val ints = arrayOf(1,2,0,3,5)
+    ints.forEach(fun(value: Int) {
+        if (value == 0) return
+        print(value)
+    })
+}
 
 
 fun main(args: Array<String>) {
